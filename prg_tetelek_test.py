@@ -1,6 +1,8 @@
 from prg_tetelek import contains_only_positives, count_accented, filter_names_starts_with, find_longest_word, sum_numbers, transform_absolute
 
 # teszteset == teszt függvény
+
+
 def test_sum():
     # given
     numbers = [1, 3, 2, 3, 2, 1] # input

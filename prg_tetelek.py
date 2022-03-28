@@ -62,11 +62,17 @@ def contains_only_positives(numbers: list[int]) -> bool:
 
 
 def filter_names_starts_with(names: list[str]) -> list[str]:
-    result = []
-    for name in names:
-        if name.lower().startswith("j"):
-            result.append(name)
-    return result
+    # result = []
+    # for name in names:
+    #     if name.lower().startswith("j"):
+    #         result.append(name)
+    # return result
+
+    return [name for name in names if starts_with_j(name)]
+
+
+def starts_with_j(text):
+    return text.lower().startswith("j")
 
 # Transzformáció
 # Írjatok egy olyan függvényt, mely paraméterül kap
@@ -76,10 +82,11 @@ def filter_names_starts_with(names: list[str]) -> list[str]:
 
 
 def transform_absolute(numbers: list[int]) -> list[int]:
-    result = []
-    for number in numbers:
-        result.append(abs(number))
-    return result
+    # result = []
+    # for number in numbers:
+    #     result.append(abs(number))
+    # return result
+    return [abs(number) for number in numbers]
 
 
 def abs(number):
