@@ -24,6 +24,35 @@ def count_accented(text):
             counter += 1
     return counter
 
+# Szélsőérték keresés tétele
+# Írj egy függvényt, ami visszaadja a leghosszabb szót
+# a paraméterként átadott szövegből. A szövegben
+# a szavakat space-ek választják el egymástól.
+
+# "indulnak a kutyák és a tyúk" -> "indulnak"
+
+def find_longest_word(text):
+    if text == "":
+        return ""
+    max_length = 0
+    for word in text.split():
+        actual_length = len(word)
+        if actual_length > max_length:
+            max_length = actual_length
+            result = word
+    return result
+
+# Eldöntés tétele
+# Írj egy függvényt, mely egy listáról eldönti, hogy csak
+# pozitív számokat tartalmaz-e! Ha egy 0 vagy negatív szám
+# is van benne, térjen vissza False értékkel!
+
+def contains_only_positives(numbers: list[int]) -> bool:
+    for number in numbers:
+        if number <= 0:
+            return False
+    return True
+
 # print("hello modul")
 # print(f"a __name__ valtozo erteke: {__name__}")
 if __name__ == "__main__":

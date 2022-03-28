@@ -1,4 +1,4 @@
-from prg_tetelek import count_accented, sum_numbers
+from prg_tetelek import contains_only_positives, count_accented, find_longest_word, sum_numbers
 
 # teszteset == teszt függvény
 def test_sum():
@@ -15,3 +15,21 @@ def test_sum_short():
 
 def test_count_accented():
     assert count_accented("árvíztűrőtükörfúrógép") == 9
+
+def test_find_longest_word():
+    assert find_longest_word("indulnak a kutyák és a tyúk") == "indulnak"
+
+def test_find_longest_word_with_empty_string():
+    assert find_longest_word("") == ""
+
+def test_find_longest_word_with_one_word():
+    assert find_longest_word("alma") == "alma"
+
+def test_contains_only_positive():
+    assert contains_only_positives([1, 2, 3]) == True
+
+def test_contains_only_positive_with_zero():
+    assert contains_only_positives([1, 0, 3]) == False
+
+def test_contains_only_positive_negative():
+    assert contains_only_positives([1, -2, 3]) == False
