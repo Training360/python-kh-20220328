@@ -1,7 +1,7 @@
 # Programozási tételek
 
-# Hozzatok létre egy sum függvényt, ami paraméterül egész számok listáját kapja,
-# és összegzi ezeket, és az összeggel tér vissza!
+# Hozzatok létre egy sum függvényt, ami paraméterül egész számok listáját
+# kapja, és összegzi ezeket, és az összeggel tér vissza!
 
 # Összegzés tétele
 
@@ -17,6 +17,7 @@ def sum_numbers(numbers):
 # egy stringet, és visszaadja, hogy hány magyar ékezetes
 # karakter van benne!
 
+
 def count_accented(text):
     counter = 0
     for c in text.lower():
@@ -30,6 +31,7 @@ def count_accented(text):
 # a szavakat space-ek választják el egymástól.
 
 # "indulnak a kutyák és a tyúk" -> "indulnak"
+
 
 def find_longest_word(text):
     if text == "":
@@ -47,14 +49,49 @@ def find_longest_word(text):
 # pozitív számokat tartalmaz-e! Ha egy 0 vagy negatív szám
 # is van benne, térjen vissza False értékkel!
 
+
 def contains_only_positives(numbers: list[int]) -> bool:
     for number in numbers:
         if number <= 0:
             return False
     return True
 
+# Szűrés
+# Írjatok egy olyan függvényt, ami paraméterül kap neveket listában,
+# és csak a "j" betűvel kezdődő neveket adja vissza.
+
+
+def filter_names_starts_with(names: list[str]) -> list[str]:
+    result = []
+    for name in names:
+        if name.lower().startswith("j"):
+            result.append(name)
+    return result
+
+# Transzformáció
+# Írjatok egy olyan függvényt, mely paraméterül kap
+# számok listáját, és visszaad egy listát a számok
+# abszolútértékével!
+# [1, 2, -3, 4, -5] -> [1, 2, 3, 4, 5]
+
+
+def transform_absolute(numbers: list[int]) -> list[int]:
+    result = []
+    for number in numbers:
+        result.append(abs(number))
+    return result
+
+
+def abs(number):
+    if number < 0:
+        return -number
+    else:
+        return number
+
 # print("hello modul")
 # print(f"a __name__ valtozo erteke: {__name__}")
+
+
 if __name__ == "__main__":
     numbers = [1, 3, 2, 3, 2, 1]
     print(sum_numbers(numbers))

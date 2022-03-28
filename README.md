@@ -17,3 +17,11 @@ git init
 ```shell
 pytest  --cov . --cov-report=html
 ```
+
+```shell
+mypy .
+```
+
+```shell
+autopep8 -a -i type_hint_demo.py
+```
