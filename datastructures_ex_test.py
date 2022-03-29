@@ -1,4 +1,4 @@
-from datastructures_ex import find_all_occurrences
+from datastructures_ex import find_all_occurrences, replace_spec_chars
 
 
 def test_normal():
@@ -12,3 +12,6 @@ def test_not_found():
 
 def test_length_problem():
     assert find_all_occurrences("xxx", "almaalma") == []
+
+def test_replace_spec_chars():
+    assert replace_spec_chars("rezáreézríeÁzÉÍrtzw") == "rezareezrieAzEIrtzw"

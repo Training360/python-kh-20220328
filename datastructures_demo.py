@@ -36,3 +36,6 @@ print(numbers)
 print("***")
 numbers.sort()
 print(numbers)
+
+# min() - szélsőérték keresés, max() - szélsőérték keresés, sum() - összegzés tétele
+# adjátok össze az első 5 egész számot
