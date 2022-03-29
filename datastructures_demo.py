@@ -39,3 +39,5 @@ print(numbers)
 
 # min() - szélsőérték keresés, max() - szélsőérték keresés, sum() - összegzés tétele
 # adjátok össze az első 5 egész számot
+
+print(sum(range(1, 6)))

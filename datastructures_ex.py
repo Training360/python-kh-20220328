@@ -38,9 +38,20 @@ def read_numbers():
     result = []
     number = -1
     while number != 0:
-        number = int(input("Adj meg egy szamot!"))
-        if number != 0:
-            result.append(number)
+        value = input("Adj meg egy számot!")
+        # try:            
+        #     number = int(value)
+        # except ValueError:
+        #     print(f"Nem számot adtál meg: {value}")
+        # else:            
+        #     if number != 0:
+        #         result.append(number)
+        if value.isnumeric():
+            number = int(value)
+            if number != 0:
+                result.append(number)
+        else:
+            print("Ez nem szám!")
     return result
 
 
