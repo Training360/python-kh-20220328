@@ -5,3 +5,4 @@ mypy
 autopep8
 flake8
 requests
+mariadb
